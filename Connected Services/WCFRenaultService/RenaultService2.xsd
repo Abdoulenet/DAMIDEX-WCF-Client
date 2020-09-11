@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared" />
+  <xs:complexType name="ArrayOfReportsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportsDTO" nillable="true" type="tns:ReportsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportsDTO" nillable="true" type="tns:ArrayOfReportsDTO" />
+  <xs:complexType name="ReportsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateExpertise" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Immatriculation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="commercialPicturesLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="damagePicturesLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="detailedLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="identificationPicturesLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="simplifiedLink" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportsDTO" nillable="true" type="tns:ReportsDTO" />
+  <xs:complexType name="ArrayOfVehiculeInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehiculeInfoDTO" nillable="true" type="tns:VehiculeInfoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehiculeInfoDTO" nillable="true" type="tns:ArrayOfVehiculeInfoDTO" />
+  <xs:complexType name="VehiculeInfoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdIdex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Registration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehiculeInfoDTO" nillable="true" type="tns:VehiculeInfoDTO" />
+  <xs:complexType name="VehicleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommercialName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfCirculation" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared" minOccurs="0" name="Energy" type="q1:Energies" />
+      <xs:element minOccurs="0" name="IdSite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSentToClient" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mileage" type="xs:int" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotificationLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumPVO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Power" type="xs:int" />
+      <xs:element minOccurs="0" name="Registration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeatingPlaces" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIN" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleDTO" nillable="true" type="tns:VehicleDTO" />
+</xs:schema>

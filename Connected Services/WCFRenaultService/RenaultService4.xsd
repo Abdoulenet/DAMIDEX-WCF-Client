@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" />
+  <xs:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.DTO.Argus" />
+  <xs:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Server" />
+  <xs:element name="GenerrerRapportExpertise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="immatricule" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateExpertise" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="vin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerrerRapportExpertiseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" minOccurs="0" name="GenerrerRapportExpertiseResult" nillable="true" type="q1:ArrayOfReportsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPricesFor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPricesForResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DAMIDEX.DTO.Argus" minOccurs="0" name="LoadPricesForResult" nillable="true" type="q2:ArrayOfArgusPrixDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadInterventionByClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdClient" type="xs:int" />
+        <xs:element minOccurs="0" name="IsExported" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadInterventionByClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" minOccurs="0" name="LoadInterventionByClientResult" nillable="true" type="q3:ArrayOfVehiculeInfoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInspection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" minOccurs="0" name="vehicles" nillable="true" type="q4:VehicleDTO" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInspectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DAMIDEX.Server" minOccurs="0" name="CreateInspectionResult" nillable="true" type="q5:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

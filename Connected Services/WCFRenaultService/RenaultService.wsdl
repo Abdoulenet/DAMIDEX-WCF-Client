@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RenaultService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared.DTO" />
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.DTO.Argus" />
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Shared" />
+      <xsd:import schemaLocation="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DAMIDEX.Server" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRenaultService_GenerrerRapportExpertise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerrerRapportExpertise" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_GenerrerRapportExpertise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerrerRapportExpertiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_LoadPricesFor_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPricesFor" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_LoadPricesFor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadPricesForResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_LoadInterventionByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadInterventionByClient" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_LoadInterventionByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadInterventionByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_CreateInspection_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInspection" />
+  </wsdl:message>
+  <wsdl:message name="IRenaultService_CreateInspection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInspectionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRenaultService">
+    <wsdl:operation name="GenerrerRapportExpertise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRenaultService/GenerrerRapportExpertise" message="tns:IRenaultService_GenerrerRapportExpertise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRenaultService/GenerrerRapportExpertiseResponse" message="tns:IRenaultService_GenerrerRapportExpertise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadPricesFor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRenaultService/LoadPricesFor" message="tns:IRenaultService_LoadPricesFor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRenaultService/LoadPricesForResponse" message="tns:IRenaultService_LoadPricesFor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadInterventionByClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRenaultService/LoadInterventionByClient" message="tns:IRenaultService_LoadInterventionByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRenaultService/LoadInterventionByClientResponse" message="tns:IRenaultService_LoadInterventionByClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInspection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRenaultService/CreateInspection" message="tns:IRenaultService_CreateInspection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRenaultService/CreateInspectionResponse" message="tns:IRenaultService_CreateInspection_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRenaultService" type="tns:IRenaultService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerrerRapportExpertise">
+      <soap:operation soapAction="http://tempuri.org/IRenaultService/GenerrerRapportExpertise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadPricesFor">
+      <soap:operation soapAction="http://tempuri.org/IRenaultService/LoadPricesFor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadInterventionByClient">
+      <soap:operation soapAction="http://tempuri.org/IRenaultService/LoadInterventionByClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInspection">
+      <soap:operation soapAction="http://tempuri.org/IRenaultService/CreateInspection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RenaultService">
+    <wsdl:port name="BasicHttpBinding_IRenaultService" binding="tns:BasicHttpBinding_IRenaultService">
+      <soap:address location="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

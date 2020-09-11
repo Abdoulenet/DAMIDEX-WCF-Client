@@ -1,0 +1,6 @@
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\bin\Debug\DAMIDEX WCF Client.exe.config
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\bin\Debug\DAMIDEX WCF Client.exe
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\bin\Debug\DAMIDEX WCF Client.pdb
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\obj\Debug\DAMIDEX WCF Client.csproj.CoreCompileInputs.cache
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\obj\Debug\DAMIDEX WCF Client.exe
+C:\Users\A159616\source\repos\DAMIDEX WCF Client\obj\Debug\DAMIDEX WCF Client.pdb

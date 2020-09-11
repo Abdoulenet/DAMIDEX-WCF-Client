@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07daa518-0bd7-4fb0-a37b-72cb847057c0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RenaultService.xsd" MetadataType="Schema" ID="ee9abc2c-9945-4d29-a98a-0beb11fe99f5" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd4" />
+    <MetadataFile FileName="RenaultService1.xsd" MetadataType="Schema" ID="3180e5c1-5bf4-487d-9f9a-e43f44d1f1d7" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd5" />
+    <MetadataFile FileName="RenaultService.wsdl" MetadataType="Wsdl" ID="b42ecf70-bfdd-4d89-9144-44feb66e21ac" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?wsdl" />
+    <MetadataFile FileName="RenaultService.disco" MetadataType="Disco" ID="2aad4c5f-3f5f-48c6-8296-9743d459bd4c" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?disco" />
+    <MetadataFile FileName="RenaultService2.xsd" MetadataType="Schema" ID="0f3e83c7-8f8f-44b0-a45b-3df7e1b0a38f" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RenaultService3.xsd" MetadataType="Schema" ID="7d0a8885-197e-487b-a5cc-ce82aa74a802" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RenaultService4.xsd" MetadataType="Schema" ID="62cf687a-676b-4497-8651-51a06332d37c" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RenaultService5.xsd" MetadataType="Schema" ID="1f0fd515-7c3e-4961-82ff-b387fd8cae61" SourceId="1" SourceUrl="http://expertise.dekra.ma/IDEXPreProd/RenaultService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
